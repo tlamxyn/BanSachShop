@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class chitiethd extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'MaHD',
+        'MaSP',
+        'Soluong',
+        'Dongia',
+    ];
 }

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class khachhang extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'MaNV',
+        'Taikhoan',
+        'MatKhau',
+        'DiaChi',
+        'Sodienthoai',
+        'Email',
+        'Avatar',
+    ];
 }
