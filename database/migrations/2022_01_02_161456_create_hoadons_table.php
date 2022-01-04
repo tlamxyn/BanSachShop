@@ -14,7 +14,16 @@ class CreateHoadonsTable extends Migration
     public function up()
     {
         Schema::create('hoadons', function (Blueprint $table) {
-            $table->id();
+            $table->string('MaHD');
+            $table->string('MaKH');
+            $table->string('TongTien');
+            $table->string('Trangthai');
+            $table->string('Giamgia');
+            $table->string('TenKH');
+            $table->string('Diachigiaohang');
+            $table->string('Phuongthucthanhtoan');
+            $table->string('Sodienthoai');
+            $table->string('MaNV');
             $table->timestamps();
         });
     }

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button">Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -12,29 +11,27 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã thể loại</th>
-                  <th>Tên thể loại</th>
-                  <th>Mô tả</th>
+                  <th>Mã hóa đơn</th>
+                  <th>Tài khoản</th>
+                  <th>Tổng Tiền (VNĐ)</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>TL001</td>
-                  <td>Lịch sử </td>
-                  <td>đây là thể loại sách lịch sử</td>
+                  <td>HD001</td>
+                  <td>lenvana123 </td>
+                  <td>2.000.000</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
                 <tr>
-                  <td>TL002</td>
-                  <td>Tiểu thuyết</td>
-                  <td>đây là thể loại sách tiểu thuyết</td> 
+                  <td>HD002</td>
+                  <td>levanb123</td>
+                  <td>500.000</td> 
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>                

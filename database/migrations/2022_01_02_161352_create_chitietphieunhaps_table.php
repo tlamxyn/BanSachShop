@@ -14,7 +14,10 @@ class CreateChitietphieunhapsTable extends Migration
     public function up()
     {
         Schema::create('chitietphieunhaps', function (Blueprint $table) {
-            $table->id();
+            $table->string('MaPN');
+            $table->string('MaSP');
+            $table->string('Soluong');
+            $table->string('Dongia');
             $table->timestamps();
         });
     }

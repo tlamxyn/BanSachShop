@@ -15,6 +15,8 @@ class CreateChucvusTable extends Migration
     {
         Schema::create('chucvus', function (Blueprint $table) {
             $table->id();
+            $table->string('Ten');
+            $table->string('Mota');
             $table->timestamps();
         });
     }

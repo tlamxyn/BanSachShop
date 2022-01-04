@@ -15,6 +15,13 @@ class CreateNhanviensTable extends Migration
     {
         Schema::create('nhanviens', function (Blueprint $table) {
             $table->id();
+            $table->string('TaiKhoan');
+            $table->string('Matkhau');
+            $table->string('Diachi');
+            $table->string('sodienthoai');
+            $table->string('email');
+            $table->string('avatar');
+            $table->string('MaCV');
             $table->timestamps();
         });
     }

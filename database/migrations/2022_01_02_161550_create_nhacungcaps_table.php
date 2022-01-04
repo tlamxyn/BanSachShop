@@ -15,6 +15,8 @@ class CreateNhacungcapsTable extends Migration
     {
         Schema::create('nhacungcaps', function (Blueprint $table) {
             $table->id();
+            $table->string('TenNcc');
+            $table->string('mota');
             $table->timestamps();
         });
     }

@@ -12,17 +12,15 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã thể loại</th>
-                  <th>Tên thể loại</th>
-                  <th>Mô tả</th>
+                  <th>Mã tài khoản</th>
+                  <th>Tài khoản</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>TL001</td>
-                  <td>Lịch sử </td>
-                  <td>đây là thể loại sách lịch sử</td>
+                  <td>TK001</td>
+                  <td>levana123</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
@@ -30,9 +28,8 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>TL002</td>
-                  <td>Tiểu thuyết</td>
-                  <td>đây là thể loại sách tiểu thuyết</td>     
+                  <td>TK002</td>
+                  <td>levanb123</td>   
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>

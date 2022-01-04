@@ -15,6 +15,12 @@ class CreateKhachhangsTable extends Migration
     {
         Schema::create('khachhangs', function (Blueprint $table) {
             $table->id();
+            $table->string('TaiKhoan');
+            $table->string('Matkhau');
+            $table->string('Diachi');
+            $table->string('sodienthoai');
+            $table->string('email');
+            $table->string('avatar');
             $table->timestamps();
         });
     }
