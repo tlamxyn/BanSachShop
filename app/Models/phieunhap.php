@@ -15,4 +15,13 @@ class phieunhap extends Model
         'Ngaylap',
         'MaNCC',
     ];
+
+    public function chitietphieunhap()
+    {
+        return $this->hasMany(chitietphieunhap::class, 'MaPN', 'MaPN');
+    }
+    public function nhanvien()
+    {
+        return $this->belongsTo(nhanvien::class, 'MaNV', 'MaNV');
+    }
 }
