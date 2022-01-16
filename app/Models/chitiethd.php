@@ -14,4 +14,13 @@ class chitiethd extends Model
         'Soluong',
         'Dongia',
     ];
+
+    public function hoadon()
+    {
+        return $this->belongsTo(hoadon::class,'MaHD', 'MaHD');
+    }
+    public function product()
+    {
+        return $this->belongsTo(product::class, 'MaSP', 'MaSP');
+    }
 }
