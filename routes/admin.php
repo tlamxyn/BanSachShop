@@ -6,12 +6,16 @@ use App\Http\Controllers\Admin;
     Route::group(['prefix' => '/'], function () {
         Route::get('login', [Admin\LoginController::class, 'showLoginForm'])->
         name('admin.login');
-
+        Route::get('singin', [Admin\LoginController::class, 'showSinginForm'])->
+        name('admin.singin');
 
         Route::post('login', [Admin\LoginController::class, 'login'])->
         name('admin.login.post');
         Route::get('logout', [Admin\LoginController::class, 'logout'])->
         name('admin.logout');
+        Route::post('singin', [Admin\LoginController::class, 'singin'])->
+        name('admin.singin.post');
+
 
         Route::group(['middleware' => ['auth:admin']], function () {
 
