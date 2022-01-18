@@ -18,9 +18,9 @@ public function run()
 $faker = Faker::create();
 
     Admin::create([
-        'name' => 'admin',
-        'email' => 'admin@gmail.com',
-        'password' => bcrypt('12345678'),
+        'name' => 'admin1234',
+        'email' => 'admin1@gmail.com',
+        'password' => bcrypt('123456789'),
     ]);
     
 }

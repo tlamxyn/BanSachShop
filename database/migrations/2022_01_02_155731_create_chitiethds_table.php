@@ -14,11 +14,12 @@ class CreateChitiethdsTable extends Migration
     public function up()
     {
         Schema::create('chitiethds', function (Blueprint $table) {
-            $table->string('MaHD');          
-            $table->string('MaSP');
+            $table->integer('MaHD')->unsigned();          
+            $table->integer('MaSP')->unsigned();
             $table->string('Soluong');
             $table->string('Dongia');
             $table->timestamps();
+            $table->primary(array('MaHD', 'MaSP'));
         });
     }
 

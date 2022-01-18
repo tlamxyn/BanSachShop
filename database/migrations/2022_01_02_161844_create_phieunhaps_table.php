@@ -14,11 +14,12 @@ class CreatePhieunhapsTable extends Migration
     public function up()
     {
         Schema::create('phieunhaps', function (Blueprint $table) {
-            $table->string('MaPN');
-            $table->string('MaSP');
+            $table->integer('MaPN')->unsigned();
+            $table->integer('MaSP')->unsigned();
             $table->string('Soluong');
             $table->string('Dongia');
             $table->timestamps();
+            $table->primary(array('MaPN', 'MaSP'));
         });
     }
 

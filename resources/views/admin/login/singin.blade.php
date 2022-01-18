@@ -23,24 +23,6 @@
     <link rel="shortcut icon" href="/assets/images/favicon.png" />
   </head>
   <body>
-    {{-- <div class="container-scroller">
-      <!-- partial:partials/_sidebar.html -->
-        <!-- partial -->
-        @include('admin.partials.sidebar')
-        <div class="container-fluid page-body-wrapper">
-          @include('admin.partials.navbar')
-
-          <div class="main-panel">
-            <div class="content-wrapper">           
-                @yield('content')
-            </div>
-          </div> 
-        </div>  
-        <!-- main-panel ends -->
-      <!-- page-body-wrapper ends -->
-    </div> --}}
-    <!-- container-scroller -->
-    <!-- plugins:js -->
     <script src="/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
@@ -70,9 +52,8 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <label class="text-center"> <h4>Đăng nhập</h4></label>
-
-                                <form class="mt-5 mb-5 login-input" action="{{ route('admin.login.post') }}" method="POST">
+                                <label class="text-center"> <h4>Đăng Kí</h4></label>
+                                <form class="mt-5 mb-5 login-input" action="{{ route('admin.singin.post') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <input class="form-control" type="email" id ="email" name="email"  placeholder="Email" autofocus value="{{ old('email') }}">
@@ -80,10 +61,13 @@
                                     <div class="form-group">
                                         <input class="form-control" type="password" id = "password" name="password" class="form-control" placeholder="Mật khẩu">
                                     </div> 
-                                    <button class="btn login-form__btn submit w-100 "   ><a class="text-center">Đăng nhập</a></button>
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" id = "password1" name="password1" class="form-control" placeholder="Mật khẩu">
+                                    </div> 
+                                    <button class="btn login-form__btn submit w-100 "   ><a class="text-center">Đăng kí</a></button>
                                 </form>
-                                <form action="{{ route('admin.singin') }}">
-                                  <button class="btn login-form__btn submit w-100 "   ><a class="text-center">Đăng Kí</a></button>
+                                <form action="{{ route('admin.login') }}">
+                                        <button class="btn login-form__btn submit w-100 "   ><a class="text-center">Đăng Nhập</a></button>
                                 </form>
                             </div>
                         </div>

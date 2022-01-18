@@ -14,7 +14,7 @@ class CreateTheloaisTable extends Migration
     public function up()
     {
         Schema::create('theloais', function (Blueprint $table) {
-            $table->id();
+            $table->id('matl');
             $table->string('ten');
             $table->string('mota');
             $table->timestamps();

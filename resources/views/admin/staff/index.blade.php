@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="users/create">Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -11,21 +12,22 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã hóa đơn</th>
+                  <th>Mã nhân viên</th>
                   <th>Tài khoản</th>
-                  <th>Tổng Tiền (VNĐ)</th>
+                  <th>Tên</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($ds_hoadon as $hoadon )
+                @foreach ($ds_nv as $nhanvien )
                   
 
                 <tr>
-                  <td>{{ $hoadon->mahd }}</td>
-                  <td>{{ $hoadon->makh }} </td>
-                  <td>{{ $hoadon->tongtien }}</td>
+                  <td>{{ $nhanvien->manv }}</td>
+                  <td>{{ $nhanvien->taikhoan }} </td>
+                  <td>{{ $nhanvien->ten }}</td>
                   <td>
+                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>

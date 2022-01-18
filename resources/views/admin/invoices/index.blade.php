@@ -18,13 +18,13 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach ($ds_hoadon as $hoadon )
+                @foreach ($ds_phieunhap as $phieunhap )
                   
 
                 <tr>
-                  <td>{{ $hoadon->mahd }}</td>
-                  <td>{{ $hoadon->makh }} </td>
-                  <td>{{ $hoadon->tongtien }}</td>
+                  <td>{{ $phieunhap->mapn }}</td>
+                  <td>{{ $phieunhap->mancc }} </td>
+                  <td>{{ $phieunhap->tongtien }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
