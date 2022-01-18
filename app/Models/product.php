@@ -9,17 +9,17 @@ class product extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'MaSP', 
+        // 'MaSP',
         'Ten',
         'Giaban',
         'SLtonkho',
         'Hinhanh',
         'Mota',
         'TacGia',
-        'NXB',
+        'NxB',
         'Theloai',
         'Trangthai',
     ];
-    protected $primarykey = 'MaSP';
+    protected $primarykey = 'id';
     protected $table ='products';
 }

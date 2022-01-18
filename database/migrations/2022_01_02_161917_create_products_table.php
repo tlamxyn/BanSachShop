@@ -14,16 +14,17 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id('MaSP');
+            $table->id();
+            // $table->string('MaSP');
             $table->string('Ten');
             $table->string('Giaban');
             $table->string('SLtonkho');
             $table->string('Hinhanh');
             $table->string('Mota');
             $table->string('TacGia');
-            $table->string('NXB');
+            $table->string('NxB');
             $table->string('Theloai');
-            $table->string(' Trangthai');
+            $table->string('Trangthai');
             $table->timestamps();
         });
     }
