@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="{{ route('admin.products.create') }}">Create</a>
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href={{ route('admin.products.create')}}>Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -20,25 +20,21 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($ds_sp as $product )
+                  
 
-                @foreach ($data as $pro)
                 <tr>
-                  <td>{{ $pro->id }}</td>
-                  <td>{{ $pro->Ten }}</td>
-                  <td>{{ $pro->SLtonkho }}</td>
-                  <td>{{ $pro->Giaban }}</td>
+                  <td>{{ $product->MaSP }}</td>
+                  <td>{{ $product->Ten }} </td>
+                  <td>{{ $product->SLtonkho }}</td>
+                  <td>{{ $product->Giaban }}</td>
                   <td>
-                    <a  href="{{ route('admin.products.edit',$pro->id) }}"  class="btn btn-outline-secondary btn-icon-text">Edit</a>
-                    <form action="{{ route('admin.products.delete',$pro->id) }}" method="POST">
-                      @csrf
-                      @method('delete')
-                      <button type="submit" class="btn btn-outline-secondary btn-icon-text">DELETE</button>
-                    </form>
+                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->MaSP)}}>Edit</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.detail',$product->MaSP)}}>Details</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text" href={{ route('admin.products.detail',$product->MaSP)}}>Delete</a>
                   </td>
                 </tr>
                 @endforeach
-                
-                
               </tbody>
             </table>
           </div>

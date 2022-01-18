@@ -23,7 +23,7 @@
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Nhà Xuất Bản</label>
-                    <input  id="my-input" required class="form-control" type="text" name="NxB">
+                    <input  id="my-input" required class="form-control" type="text" name="NXB">
                 
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Số Lượng</label>
@@ -31,11 +31,7 @@
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Giá Bán</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Giaban">
-            
-                
-                    <label  for="my-input" class="control-label" style="margin-top: 10px">Trạng Thái</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Trangthai">
+                    <input  id="my-input" required class="form-control" type="text" name="Giaban">             
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Hình Ảnh</label>
