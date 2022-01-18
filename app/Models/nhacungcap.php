@@ -10,7 +10,7 @@ class nhacungcap extends Model
     use HasFactory;
     protected $fillable = [
         'MaNCC',
-        'Ten',
-        'Mota',
+        'TenNcc',
+        'mota',
     ];
 }

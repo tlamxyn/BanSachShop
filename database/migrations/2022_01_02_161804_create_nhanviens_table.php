@@ -14,7 +14,7 @@ class CreateNhanviensTable extends Migration
     public function up()
     {
         Schema::create('nhanviens', function (Blueprint $table) {
-            $table->id();
+            $table->id('MaNV');
             $table->string('TaiKhoan');
             $table->string('Matkhau');
             $table->string('Diachi');

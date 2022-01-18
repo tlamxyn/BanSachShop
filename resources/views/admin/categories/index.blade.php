@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button" >Create</a>
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="{{ route('admin.categories.create') }}" >Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -19,26 +19,19 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($ds_theloai as $categories )
+                  
+
                 <tr>
-                  <td>TL001</td>
-                  <td>Lịch sử </td>
-                  <td>đây là thể loại sách lịch sử</td>
+                  <td>{{ $categories->matl }}</td>
+                  <td>{{ $categories->ten }} </td>
+                  <td>{{ $categories->mota }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
-                <tr>
-                  <td>TL002</td>
-                  <td>Tiểu thuyết</td>
-                  <td>đây là thể loại sách tiểu thuyết</td>  
-                  <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
-                  </td>               
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

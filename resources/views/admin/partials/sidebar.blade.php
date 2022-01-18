@@ -89,11 +89,43 @@
         </a>
       </li>
       <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ route('admin.invoice.index') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Invoice</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
         <a class="nav-link" href="{{ route('admin.users.index') }}">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
           <span class="menu-title">User</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ route('admin.role.index') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Role</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ route('admin.staff.index') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Staff</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ route('admin.supplier.index') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Supplier</span>
         </a>
       </li>
     </ul>
