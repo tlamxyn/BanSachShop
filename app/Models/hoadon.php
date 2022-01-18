@@ -21,4 +21,12 @@ class hoadon extends Model
         'Ngaylap',
         'MaNV',
     ];
+    public function khachhang()
+    {
+        return $this->belongsTo(Khachhang::class, 'MaNV', 'MaKH');
+    }
+    public function chitiethd()
+    {
+        return $this->hasMany(chitiethd::class, 'MaHD', 'MaHD');
+    }
 }

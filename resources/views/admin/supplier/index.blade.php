@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="{{ route('admin.supplier.create')}}">Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -11,22 +12,22 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã hóa đơn</th>
-                  <th>Tài khoản</th>
-                  <th>Tổng Tiền (VNĐ)</th>
+                  <th>Mã nhà cung cấp</th>
+                  <th>tên </th>
+                  <th>mô tả</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($ds_hoadon as $hoadon )
+                @foreach ($ds_ncc as $supplier )
                   
 
                 <tr>
-                  <td>{{ $hoadon->mahd }}</td>
-                  <td>{{ $hoadon->makh }} </td>
-                  <td>{{ $hoadon->tongtien }}</td>
+                  <td>{{ $supplier->MaNCC  }}</td>
+                  <td>{{ $supplier->TenNcc }} </td>
+                  <td>{{ $supplier->mota }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>

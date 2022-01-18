@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button">Create</a>
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="users/create">Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -12,30 +12,27 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã tài khoản</th>
+                  <th>Mã khách hàng</th>
                   <th>Tài khoản</th>
+                  <th>Tên </th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
+                @foreach ($ds_kh as $user )
+                  
+
                 <tr>
-                  <td>TK001</td>
-                  <td>levana123</td>
+                  <td>{{ $user->makh }}</td>
+                  <td>{{ $user->taikhoan }} </td>
+                  <td>{{ $user->ten }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
-                <tr>
-                  <td>TK002</td>
-                  <td>levanb123</td>   
-                  <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
-                  </td>            
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
