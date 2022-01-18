@@ -31,7 +31,7 @@
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->MaSP)}}>Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.detail',$product->MaSP)}}>Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text" href={{ route('admin.products.detail',$product->MaSP)}}>Delete</a>
                   </td>
                 </tr>
                 @endforeach
