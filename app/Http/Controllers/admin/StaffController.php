@@ -13,22 +13,20 @@ class StaffController extends Controller
         $ds_nv=nhanvien::all();
         return view('admin.staff.index', compact('ds_nv'));
     }
-    // public function create(Request $request)
-    // {
+    public function create(Request $request)
+    {
 
-    //     return view('admin.categories.create');
-    // }
-    // public function store(Request $request)
-    // {
-    //     $theloai = $request->all();
-    //     theloai::create($theloai);
-    //     return redirect()->back();
-    // }
-    // public function update(Request $request, $matl)
-    // {
-    //     $theloai = theloai::find($matl);
-    //     $theloai->ten = $request->input('ten');
-    //     $theloai->mota=$request->input('mota');
-    //     $theloai->update();
-    // }
+        return view('admin.staff.create');
+    }
+    public function store(Request $request)
+    {
+        $staff = [
+            "Taikhoan" =>$request->Taikhoan,
+            "MatKhau" => $request->Matkhau,
+            "Email" => $request->Email,
+            "MaCV" => $request->Chucvu
+        ];
+        nhanvien::create($staff);
+        return redirect()->back();
+    }
 }

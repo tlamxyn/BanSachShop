@@ -16,7 +16,7 @@ class product extends Model
         'Hinhanh',
         'Mota',
         'TacGia',
-        'NxB',
+        'NXB',
         'Theloai',
         'Trangthai',
     ];

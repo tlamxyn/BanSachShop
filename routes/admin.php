@@ -47,15 +47,7 @@ use App\Http\Controllers\Admin;
             Route::get('/{id}/delete', 'App\Http\Controllers\admin\ProductController@delete')->name('admin.products.delete');
           });
         Route::group(['prefix' => 'orders'], function () {
-            Route::get('/',  'App\Http\Controllers\admin\OrderController@index')->name('admin.orders.index');
-          
-            Route::get('/create', [admin\CategoryController::class, 'create'])->name('admin.orders.create');
-          
-            Route::post('/store', [admin\CategoryController::class, 'store'])->name('admin.orders.store');
-          
-            Route::get('/{id}/edit', [admin\CategoryController::class, 'edit'])->name('admin.orders.edit');
-          
-            Route::post('/update', [admin\CategoryController::class, 'update'])->name('admin.orders.update');
+            Route::get('/',  'App\Http\Controllers\admin\OrderController@index')->name('admin.orders.index');                  
             Route::get('/{id}/delete', [admin\CategoryController::class, 'delete'])->name('admin.orders.delete');
           });
           Route::group(['prefix' => 'invoice'], function () {
@@ -83,7 +75,7 @@ use App\Http\Controllers\Admin;
           Route::group(['prefix' => 'staff'], function () {
             Route::get('/',  'App\Http\Controllers\admin\StaffController@index')->name('admin.staff.index');
         
-            Route::get('/{id}',  'App\Http\Controllers\admin\StaffController@detail')->name('admin.staff.detail');
+            //Route::get('/{id}',  'App\Http\Controllers\admin\StaffController@detail')->name('admin.staff.detail');
         
             Route::get('/create', 'App\Http\Controllers\admin\StaffController@create')->name('admin.staff.create');
           

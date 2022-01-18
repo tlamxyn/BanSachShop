@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="users/create">Create</a>
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href={{ route('admin.staff.create')}}>Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -12,9 +12,9 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Mã nhân viên</th>
                   <th>Tài khoản</th>
-                  <th>Tên</th>
+                  <th>Email</th>
+                  <th>Chức vụ</th>
                   <th></th>
                 </tr>
               </thead>
@@ -23,11 +23,10 @@
                   
 
                 <tr>
-                  <td>{{ $nhanvien->manv }}</td>
-                  <td>{{ $nhanvien->taikhoan }} </td>
-                  <td>{{ $nhanvien->ten }}</td>
+                  <td>{{ $nhanvien->TaiKhoan }}</td>
+                  <td>{{ $nhanvien->email }} </td>
+                  <td>{{ $nhanvien->MaCV }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>

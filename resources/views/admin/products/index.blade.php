@@ -24,14 +24,14 @@
                   
 
                 <tr>
-                  <td>{{ $product->MaSP }}</td>
+                  <td>{{ $product->id }}</td>
                   <td>{{ $product->Ten }} </td>
                   <td>{{ $product->SLtonkho }}</td>
                   <td>{{ $product->Giaban }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->MaSP)}}>Edit</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.detail',$product->MaSP)}}>Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text" href={{ route('admin.products.detail',$product->MaSP)}}>Delete</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->id)}}>Edit</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.detail',$product->id)}}>Details</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
                 @endforeach

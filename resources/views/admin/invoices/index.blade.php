@@ -22,9 +22,9 @@
                   
 
                 <tr>
-                  <td>{{ $phieunhap->mapn }}</td>
-                  <td>{{ $phieunhap->mancc }} </td>
-                  <td>{{ $phieunhap->tongtien }}</td>
+                  <td>{{ $phieunhap->MaPN }}</td>
+                  <td>{{ $phieunhap->MaNV }} </td>
+                  <td>{{ $phieunhap->Dongia }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>

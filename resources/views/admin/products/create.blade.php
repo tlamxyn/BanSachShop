@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <form action="{{ route('admin.products.store')}}" method="put" enctype="multipart/form-data">
+            <form action="{{ route('admin.products.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
         

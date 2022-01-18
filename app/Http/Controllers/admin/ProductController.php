@@ -28,7 +28,7 @@ class ProductController extends Controller
             "Hinhanh" => $request->Hinhanh,
             "Mota" => $request->Mota ,
             "TacGia" => $request->TacGia,
-            "NXB" =>$request->NxB,
+            "NXB" =>$request->NXB,
             "Theloai" => $request->Theloai,
         ];
         product::create($data);
@@ -38,8 +38,8 @@ class ProductController extends Controller
 
     public function detail($MaSP)
     {
-        if (product::where('MaSP', $MaSP)->exists()) {
-            $data = product::where('MaSP',$MaSP)->get();
+        if (product::where('id', $MaSP)->exists()) {
+            $data = product::where('id',$MaSP)->get();
             return view('admin.products.detail', compact('data'));
         }
         else
@@ -50,7 +50,7 @@ class ProductController extends Controller
 
     public function Edit($MaSP)
     {
-        $data = product::where('MaSP',$MaSP)->get();
+        $data = product::where('id',$MaSP)->get();
         return view('Admin.products.Edit',compact('data'));
     }
     public function update(Request $request)

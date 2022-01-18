@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="users/create">Create</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
@@ -23,11 +22,10 @@
                   
 
                 <tr>
-                  <td>{{ $user->makh }}</td>
-                  <td>{{ $user->taikhoan }} </td>
-                  <td>{{ $user->ten }}</td>
+                  <td>{{ $user->MAKH }}</td>
+                  <td>{{ $user->TaiKhoan }} </td>
+                  <td>{{ $user->email }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>

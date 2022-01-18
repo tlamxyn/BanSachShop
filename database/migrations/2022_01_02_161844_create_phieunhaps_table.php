@@ -15,11 +15,11 @@ class CreatePhieunhapsTable extends Migration
     {
         Schema::create('phieunhaps', function (Blueprint $table) {
             $table->integer('MaPN')->unsigned();
-            $table->integer('MaSP')->unsigned();
+            $table->integer('MaNV')->unsigned();
             $table->string('Soluong');
             $table->string('Dongia');
             $table->timestamps();
-            $table->primary(array('MaPN', 'MaSP'));
+            $table->primary(array('MaPN', 'MaNV'));
         });
     }
 

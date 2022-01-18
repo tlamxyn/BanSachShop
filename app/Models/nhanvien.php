@@ -16,6 +16,6 @@ class nhanvien extends Model
         'Sodienthoai',
         'Email',
         'Avatar',
-        'ChucVu',
+        'MaCV',
     ];
 }
