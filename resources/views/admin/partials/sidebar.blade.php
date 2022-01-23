@@ -69,7 +69,7 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Categories</span>
+          <span class="menu-title">Thể loại</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -77,7 +77,7 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Product</span>
+          <span class="menu-title">Sách</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -85,7 +85,7 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Order</span>
+          <span class="menu-title">Đơn đặt hàng</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -93,7 +93,7 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Invoice</span>
+          <span class="menu-title">Phiếu nhập</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -101,15 +101,7 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">User</span>
-        </a>
-      </li>
-      <li class="nav-item menu-items">
-        <a class="nav-link" href="{{ route('admin.role.index') }}">
-          <span class="menu-icon">
-            <i class="mdi mdi-speedometer"></i>
-          </span>
-          <span class="menu-title">Role</span>
+          <span class="menu-title">Khách hàng</span>
         </a>
       </li>
       <li class="nav-item menu-items">
@@ -117,15 +109,24 @@
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Staff</span>
+          <span class="menu-title">Nhân viên</span>
         </a>
       </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{ route('admin.role.index') }}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Chức vụ</span>
+        </a>
+      </li>
+
       <li class="nav-item menu-items">
         <a class="nav-link" href="{{ route('admin.supplier.index') }}">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Supplier</span>
+          <span class="menu-title">Nhà cung cấp</span>
         </a>
       </li>
     </ul>
