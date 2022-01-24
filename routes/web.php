@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-// Route::get('/home', 'index');
+Route::get('/home', 'index');
