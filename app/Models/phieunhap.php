@@ -11,7 +11,8 @@ class phieunhap extends Model
     protected $fillable = [
         'MaPN',
         'MaNV',
-        'dongia',
+        'MaNCC',
+        'Dongia',
     ];
     public function chitietphieunhap()
     {

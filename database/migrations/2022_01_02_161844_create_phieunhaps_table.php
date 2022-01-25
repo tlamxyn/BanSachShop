@@ -13,13 +13,22 @@ class CreatePhieunhapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('phieunhaps', function (Blueprint $table) {
-            $table->integer('MaPN')->unsigned();
+        Schema::create('phieunhap', function (Blueprint $table) {
+            $table->increments('MaPN');
             $table->integer('MaNV')->unsigned();
+            $table->integer('MaNCC')->unsigned();
             $table->string('Soluong');
             $table->string('Dongia');
             $table->timestamps();
-            $table->primary(array('MaPN', 'MaNV'));
+        });
+        Schema::table('chitietphieunhap', function (Blueprint $table) {
+            $table->foreign('MaPN')->references('MaPN')->on('phieunhap');
+        });
+        Schema::table('phieunhap', function (Blueprint $table) {
+            $table->foreign('MaNV')->references('MaNV')->on('nhanvien');
+        });
+        Schema::table('phieunhap', function (Blueprint $table) {
+            $table->foreign('MaNCC')->references('MaNCC')->on('nhacungcap');
         });
     }
 
@@ -30,6 +39,6 @@ class CreatePhieunhapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phieunhaps');
+        Schema::dropIfExists('phieunhap');
     }
 }

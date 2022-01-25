@@ -23,7 +23,7 @@ class hoadon extends Model
     ];
     public function khachhang()
     {
-        return $this->belongsTo(Khachhang::class, 'MaNV', 'MaKH');
+        return $this->belongsTo(Khachhang::class, 'MaKH', 'MaKH');
     }
     public function chitiethd()
     {

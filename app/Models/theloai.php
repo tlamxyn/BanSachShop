@@ -9,8 +9,8 @@ class theloai extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'matl',
-        'ten',
-        'mota',
+        'MaTL',
+        'Ten',
+        'Mota',
     ];
 }

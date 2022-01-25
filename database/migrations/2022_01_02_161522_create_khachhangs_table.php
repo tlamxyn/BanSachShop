@@ -13,15 +13,18 @@ class CreateKhachhangsTable extends Migration
      */
     public function up()
     {
-        Schema::create('khachhangs', function (Blueprint $table) {
-            $table->id('MAKH');
+        Schema::create('khachhang', function (Blueprint $table) {
+            $table->increments('MAKH');
             $table->string('TaiKhoan');
             $table->string('Matkhau');
             $table->string('Diachi');
-            $table->string('sodienthoai');
-            $table->string('email');
-            $table->string('avatar');
+            $table->string('Sodienthoai');
+            $table->string('Email');
+            $table->string('Avatar');
             $table->timestamps();
+        });
+        Schema::table('hoadon', function (Blueprint $table) {
+            $table->foreign('MaKH')->references('MaKH')->on('khachhang');
         });
     }
 
@@ -32,6 +35,6 @@ class CreateKhachhangsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('khachhangs');
+        Schema::dropIfExists('khachhang');
     }
 }

@@ -13,9 +13,8 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            // $table->string('MaSP');
+        Schema::create('sach', function (Blueprint $table) {
+            $table->increments('MaSP');
             $table->string('Ten');
             $table->string('Giaban');
             $table->string('SLtonkho');
@@ -23,9 +22,15 @@ class CreateProductsTable extends Migration
             $table->string('Mota');
             $table->string('TacGia');
             $table->string('NxB');
-            $table->string('Theloai');
+            $table->integer('Theloai')->unsigned();
             $table->string('Trangthai');
             $table->timestamps();
+        });
+        Schema::table('chitiethd', function (Blueprint $table) {
+            $table->foreign('MaSP')->references('MaSP')->on('sach');
+        });
+        Schema::table('chitietphieunhap', function (Blueprint $table) {
+            $table->foreign('MaSP')->references('MaSP')->on('sach');
         });
     }
 
@@ -36,6 +41,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('sach');
     }
 }
