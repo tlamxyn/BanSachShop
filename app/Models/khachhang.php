@@ -9,7 +9,6 @@ class khachhang extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'MaNV',
         'Taikhoan',
         'MatKhau',
         'DiaChi',
