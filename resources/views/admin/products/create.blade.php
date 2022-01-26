@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <form action="{{ route('admin.products.store')}}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
         
@@ -14,7 +14,7 @@
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Thể Loại</label>
                     <input  id="my-input" required class="form-control" type="text" name="Theloai">
 
-                    <label  for="my-input" class="control-label" style="margin-top: 10px">Mô tả</label>
+                    <label  for="my-input" class="control-label" style="margin-top: 10px">Moo tar</label>
                     <input  id="my-input" required class="form-control" type="text" name="Mota">
             
                 
@@ -23,7 +23,7 @@
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Nhà Xuất Bản</label>
-                    <input  id="my-input" required class="form-control" type="text" name="NXB">
+                    <input  id="my-input" required class="form-control" type="text" name="NxB">
                 
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Số Lượng</label>
@@ -31,7 +31,11 @@
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Giá Bán</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Giaban">             
+                    <input  id="my-input" required class="form-control" type="text" name="Giaban">
+            
+                
+                    <label  for="my-input" class="control-label" style="margin-top: 10px">Trạng Thái</label>
+                    <input  id="my-input" required class="form-control" type="text" name="Trangthai">
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Hình Ảnh</label>
