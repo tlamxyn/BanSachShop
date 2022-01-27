@@ -5,7 +5,7 @@
     <div class=" stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Basic Table</h4>
+          <h4 class="card-title">Đơn đặt hàng</h4>
           </p>
           <div class="table-responsive">
             <table class="table">

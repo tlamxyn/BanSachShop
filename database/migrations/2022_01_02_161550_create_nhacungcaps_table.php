@@ -13,10 +13,10 @@ class CreateNhacungcapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nhacungcaps', function (Blueprint $table) {
-            $table->id('MaNCC');
+        Schema::create('nhacungcap', function (Blueprint $table) {
+            $table->increments('MaNCC');
             $table->string('TenNcc');
-            $table->string('mota');
+            $table->string('Mota');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateNhacungcapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhacungcaps');
+        Schema::dropIfExists('nhacungcap');
     }
 }

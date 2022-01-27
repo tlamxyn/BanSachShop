@@ -9,8 +9,8 @@
                 <div class="form-group">
                     @csrf
                     @method('put')
-                    <label  for="my-input" class="control-label" style="margin-top: 10px"> MaSP </label>
-                    <input  id="my-input" required class="form-control" type="text" name="Ten" value="{{  $content->MaSP }}">
+                    {{-- <label  for="my-input" class="control-label" style="margin-top: 10px"> MaSP </label>
+                    <input  id="my-input" required class="form-control" type="text" name="Ten" value="{{  $content->id }}"> --}}
                     <label  for="my-input" class="control-label" style="margin-top: 10px"> Tên Sản Phẩm </label>
                     <input  id="my-input" required class="form-control" type="text" name="Ten" value="{{  $content->Ten }}">
 
@@ -26,7 +26,7 @@
 
 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Nhà Xuất Bản</label>
-                    <input  id="my-input" required class="form-control" type="text" name="NxB" value="{{  $content->NXB }}">
+                    <input  id="my-input" required class="form-control" type="text" name="NxB" value="{{  $content->NxB }}">
 
 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Số Lượng</label>

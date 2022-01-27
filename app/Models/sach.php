@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class product extends Model
+class sach extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -20,7 +20,7 @@ class product extends Model
         'Trangthai',
     ];
     protected $primarykey = 'id';
-    protected $table ='products';
+    protected $table ='sach';
     public function theloai()
     {
         return $this->hasMany(chitiethd::class, 'Theloai', 'matl');

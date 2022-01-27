@@ -13,8 +13,8 @@ class CreateHoadonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hoadons', function (Blueprint $table) {
-            $table->integer('MaHD')->unsigned();
+        Schema::create('hoadon', function (Blueprint $table) {
+            $table->increments('MaHD');
             $table->integer('MaKH')->unsigned();
             $table->string('TongTien');
             $table->string('Trangthai');
@@ -25,7 +25,9 @@ class CreateHoadonsTable extends Migration
             $table->string('Sodienthoai');
             $table->string('MaNV');
             $table->timestamps();
-            $table->primary(array('MaHD', 'MaKH'));
+        });
+        Schema::table('chitiethd', function (Blueprint $table) {
+            $table->foreign('MaHD')->references('MaHD')->on('hoadon');
         });
     }
 
@@ -36,6 +38,6 @@ class CreateHoadonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hoadons');
+        Schema::dropIfExists('hoadon');
     }
 }

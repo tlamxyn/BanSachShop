@@ -13,13 +13,13 @@ class CreateChitiethdsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chitiethds', function (Blueprint $table) {
-            $table->integer('MaHD')->unsigned();          
+        Schema::create('chitiethd', function (Blueprint $table) {
+            $table->integer('MaHD')->unsigned();                   
             $table->integer('MaSP')->unsigned();
             $table->string('Soluong');
             $table->string('Dongia');
             $table->timestamps();
-            $table->primary(array('MaHD', 'MaSP'));
+            $table->primary(['MaHD', 'MaSP']);
         });
     }
 
@@ -30,6 +30,6 @@ class CreateChitiethdsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chitiethds');
+        Schema::dropIfExists('chitiethd');
     }
 }

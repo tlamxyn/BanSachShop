@@ -13,7 +13,7 @@ class CreateChitietphieunhapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('chitietphieunhaps', function (Blueprint $table) {
+        Schema::create('chitietphieunhap', function (Blueprint $table) {
             $table->integer('MaPN')->unsigned();
             $table->integer('MaSP')->unsigned();
             $table->string('Soluong');
@@ -30,6 +30,6 @@ class CreateChitietphieunhapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chitietphieunhaps');
+        Schema::dropIfExists('chitietphieunhap');
     }
 }
