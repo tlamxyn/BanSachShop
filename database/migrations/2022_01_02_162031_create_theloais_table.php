@@ -13,12 +13,16 @@ class CreateTheloaisTable extends Migration
      */
     public function up()
     {
-        Schema::create('theloais', function (Blueprint $table) {
-            $table->id('matl');
-            $table->string('ten');
-            $table->string('mota');
+        Schema::create('theloai', function (Blueprint $table) {
+            $table->increments('MaTL');
+            $table->string('Ten');
+            $table->string('Mota');
             $table->timestamps();
         });
+        Schema::table('sach', function (Blueprint $table) {
+            $table->foreign('Theloai')->references('MaTL')->on('theloai');
+        });
+        
     }
 
     /**
@@ -28,6 +32,6 @@ class CreateTheloaisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('theloais');
+        Schema::dropIfExists('theloai');
     }
 }

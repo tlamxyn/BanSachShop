@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class phieunhap extends Model
 {
+    public $table = "phieunhap";
+
     use HasFactory;
     protected $fillable = [
         'MaPN',
         'MaNV',
-        'dongia',
+        'MaNCC',
+        'Dongia',
     ];
     public function chitietphieunhap()
     {

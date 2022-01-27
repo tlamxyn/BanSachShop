@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('title') Category @endsection
 @section('content')
-<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="{{ route('admin.supplier.create')}}">Create</a>
+<a class="btn btn-outline-secondary btn-icon-text create-new-button" href="{{ route('admin.supplier.create')}}">Thêm mới</a>
 <div >
     <div class=" stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Basic Table</h4>
+          <h4 class="card-title">Danh sách nhà cung cấp</h4>
           </p>
           <div class="table-responsive">
             <table class="table">

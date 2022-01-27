@@ -13,16 +13,19 @@ class CreateNhanviensTable extends Migration
      */
     public function up()
     {
-        Schema::create('nhanviens', function (Blueprint $table) {
-            $table->id('MaNV');
+        Schema::create('nhanvien', function (Blueprint $table) {
+            $table->increments('MaNV');
             $table->string('TaiKhoan');
             $table->string('Matkhau');
             $table->string('Diachi');
             $table->string('sodienthoai');
             $table->string('email');
             $table->string('avatar');
-            $table->string('MaCV');
+            $table->integer('MaCV')->unsigned();
             $table->timestamps();
+        });
+        Schema::table('nhanvien', function (Blueprint $table) {
+            $table->foreign('MaCV')->references('MaCV')->on('chucvu');
         });
     }
 
@@ -33,6 +36,6 @@ class CreateNhanviensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhanviens');
+        Schema::dropIfExists('nhanvien');
     }
 }

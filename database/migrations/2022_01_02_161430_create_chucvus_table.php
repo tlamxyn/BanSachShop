@@ -13,8 +13,8 @@ class CreateChucvusTable extends Migration
      */
     public function up()
     {
-        Schema::create('chucvus', function (Blueprint $table) {
-            $table->id('MACV');
+        Schema::create('chucvu', function (Blueprint $table) {
+            $table->increments('MACV');
             $table->string('Ten');
             $table->string('Mota');
             $table->timestamps();
@@ -28,6 +28,6 @@ class CreateChucvusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chucvus');
+        Schema::dropIfExists('chucvu');
     }
 }

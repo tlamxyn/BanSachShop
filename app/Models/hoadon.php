@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class hoadon extends Model
 {
+    public $table = "hoadon";
+
     use HasFactory;
     protected $fillable = [
         'MaHD',
@@ -23,7 +25,7 @@ class hoadon extends Model
     ];
     public function khachhang()
     {
-        return $this->belongsTo(Khachhang::class, 'MaNV', 'MaKH');
+        return $this->belongsTo(Khachhang::class, 'MaKH', 'MaKH');
     }
     public function chitiethd()
     {

@@ -9,7 +9,6 @@ class product extends Model
 {
     use HasFactory;
     protected $fillable = [
-        // 'MaSP',
         'Ten',
         'Giaban',
         'SLtonkho',
@@ -22,4 +21,8 @@ class product extends Model
     ];
     protected $primarykey = 'id';
     protected $table ='products';
+    public function theloai()
+    {
+        return $this->hasMany(chitiethd::class, 'Theloai', 'matl');
+    }
 }
