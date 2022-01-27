@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class theloai extends Model
 {
+    protected $table ='theloai';
+
     use HasFactory;
     protected $fillable = [
         'MaTL',

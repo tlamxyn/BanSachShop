@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class chucvu extends Model
 {
+    public $table = "chucvu";
+
     use HasFactory;
     protected $fillable = [
         'MaCV',
