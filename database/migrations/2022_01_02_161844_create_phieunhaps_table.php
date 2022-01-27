@@ -17,8 +17,7 @@ class CreatePhieunhapsTable extends Migration
             $table->increments('MaPN');
             $table->integer('MaNV')->unsigned();
             $table->integer('MaNCC')->unsigned();
-            $table->string('Soluong');
-            $table->string('Dongia');
+            $table->string('Tongtien');
             $table->timestamps();
         });
         Schema::table('chitietphieunhap', function (Blueprint $table) {
