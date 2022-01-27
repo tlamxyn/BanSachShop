@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class hoadon extends Model
 {
+    public $table = "hoadon";
+
     use HasFactory;
     protected $fillable = [
         'MaHD',
