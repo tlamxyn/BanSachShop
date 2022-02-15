@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class chitiethd extends Model
 {
+    public $table = "chitiethd";
+
     use HasFactory;
     protected $fillable = [
         'MaHD',
@@ -18,8 +20,8 @@ class chitiethd extends Model
     {
         return $this->belongsTo(hoadon::class,'MaHD', 'MaHD');
     }
-    public function product()
+    public function sach()
     {
-        return $this->belongsTo(product::class, 'MaSP', 'MaSP');
+        return $this->belongsTo(sach::class, 'MaSP', 'MaSP');
     }
 }

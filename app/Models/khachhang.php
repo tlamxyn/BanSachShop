@@ -11,6 +11,9 @@ use Laravel\Sanctum\HasApiTokens;
 class khachhang extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    public $table = "khachhang";
+
+    use HasFactory;
     protected $fillable = [
         'Taikhoan',
         'password',
@@ -20,7 +23,6 @@ class khachhang extends Authenticatable
         'Avatar',
     ];
     protected $primarykey = 'id';
-    protected $table ='khachhang';
     protected $hidden = [
         'password',
         'remember_token',
@@ -35,4 +37,8 @@ class khachhang extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function hoadon()
+    {
+        return $this->hasMany(hoadon::class, 'MaKH', 'MaKH');
+    }
 }

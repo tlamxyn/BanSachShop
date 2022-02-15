@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    use AuthenticatesUsers;
+    // use AuthenticatesUsers;
     protected $redirectTo = '/admin';
 
     public function __construct()

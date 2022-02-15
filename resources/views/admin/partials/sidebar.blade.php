@@ -81,21 +81,41 @@
         </a>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{ route('admin.orders.index') }}">
+        <a class="nav-link" href="{{ route('admin.warehouses.index') }}">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Đơn đặt hàng</span>
+          <span class="menu-title">Kho</span>
         </a>
       </li>
-      <li class="nav-item menu-items">
-        <a class="nav-link" href="{{ route('admin.invoice.index') }}">
+      <li class="nav-item menu-items"">
+        <a class="nav-link" >
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
-          <span class="menu-title">Phiếu nhập</span>
+          
+            <span class="menu-title">Hóa đơn</span>
         </a>
+        <ul class="">
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('admin.orders.index') }}">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Đơn đặt hàng</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('admin.invoice.index') }}">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Phiếu nhập</span>
+            </a>
+          </li>
+        </ul>
       </li>
+
       <li class="nav-item menu-items">
         <a class="nav-link" href="{{ route('admin.users.index') }}">
           <span class="menu-icon">

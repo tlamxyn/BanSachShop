@@ -12,10 +12,13 @@
             <table class="table">
               <thead>
                 <tr>
+                  <th></th>
                   <th>Mã sản phẩm</th>
                   <th>Tên sản phẩm</th>
-                  <th>Số Lượng tồn kho</th>
-                  <th>Đơn giá (VNĐ)</th>
+                  <th>Thể Loại</th>
+                  
+                  <th>Tác giả</th>
+                  <th>Nhà xuất bản</th>
                   <th></th>
                 </tr>
               </thead>
@@ -24,14 +27,15 @@
                   
 
                 <tr>
-                  <td>{{ $product->id }}</td>
+                  <td></td>
+                  <td>{{ $product->MaSP }}</td>
                   <td>{{ $product->Ten }} </td>
-                  <td>{{ $product->SLtonkho }}</td>
-                  <td>{{ $product->Giaban }}</td>
+                  <td>{{ $product->theloai->Ten }}</td>
+                  
+                  <td>{{ $product->TacGia }}</td>
+                  <td>{{ $product->NxB }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->id)}}>Edit</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.detail',$product->id)}}>Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
+                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->MaSP)}}>Edit</a>
                   </td>
                 </tr>
                 @endforeach

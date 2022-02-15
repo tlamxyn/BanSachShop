@@ -4,13 +4,13 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\product;
+use App\Models\sach;
 class ProductController extends Controller
 {
     //
     public function index()
     {
-        $ds_sp=product::all();
+        $ds_sp=sach::all();
         return view('admin.products.index', compact('ds_sp'));
     }
 
@@ -20,25 +20,36 @@ class ProductController extends Controller
     }
     public function store(Request $request)
     {
+        $ds_sp=sach::all();
+        $count=$ds_sp->count();
+        $base =0;
+        $one =1;
+        $filename=$count.'.'.$request->Hinhanh->extension();
+        $request->validate([
+            'Hinhanh' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $request->file('Hinhanh')->storeAs('images\product', $filename, 'local');
         $data = [
             "Ten" =>$request->Ten,
-            "Giaban" => $request->Giaban,
-            "SLtonkho" => $request->SLtonkho,
-            "Hinhanh" => $request->Hinhanh,
+            "Giaban" => $base ,
+            "SLtonkho" => $base ,
+            "Hinhanh" => $filename,
             "Mota" => $request->Mota ,
             "TacGia" => $request->TacGia,
-            "NXB" =>$request->NXB,
+            "NXB" =>$request->NxB,
             "Theloai" => $request->Theloai,
+            "Trangthai"=>$one,
         ];
-        product::create($data);
+
+        sach::create($data);
        
         return redirect()->back();
     }
 
     public function detail($MaSP)
     {
-        if (product::where('id', $MaSP)->exists()) {
-            $data = product::where('id',$MaSP)->get();
+        if (sach::where('MaSP', $MaSP)->exists()) {
+            $data = sach::where('MaSP',$MaSP)->get();
             return view('admin.products.detail', compact('data'));
         }
         else
@@ -49,13 +60,18 @@ class ProductController extends Controller
 
     public function Edit($MaSP)
     {
-        $data = product::where('id',$MaSP)->get();
+        $data = sach::where('MaSP',$MaSP)->get();
         return view('Admin.products.Edit',compact('data'));
     }
     public function update(Request $request)
     {
         
-        $data = product::where('MaSP',$request->TenMaSP)->first();
+        $filename=$request->MaSP.'.'.$request->Hinhanh->extension();
+        $request->validate([
+            'Hinhanh' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $request->file('Hinhanh')->storeAs('images\product', $filename, 'local');
+        $data = sach::where('MaSP',$request->MaSP)->first();
 
         if (!$data) {
             return back()->withInput();
@@ -64,10 +80,10 @@ class ProductController extends Controller
         'Ten' => $request->Ten,
         'Giaban' => $request->Giaban,
         'SLtonkho'=> $request->SLtonkho,
-        'Hinhanh' => $request->Hinhanh,
+        'Hinhanh' =>  $filename,
         'Mota' => $request->Mota,
         'TacGia' =>$request->TacGia,
-        'NXB' => $request->NXB,
+        'NXB' => $request->NxB,
         'Theloai' => $request->Theloai,
     ]);
         return redirect()->back();

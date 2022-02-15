@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class phieunhap extends Model
 {
+    public $table = "phieunhap";
+
     use HasFactory;
     protected $fillable = [
         'MaPN',
@@ -21,5 +23,9 @@ class phieunhap extends Model
     public function nhanvien()
     {
         return $this->belongsTo(nhanvien::class, 'MaNV', 'MaNV');
+    }
+    public function nhacungcap()
+    {
+        return $this->belongsTo(nhacungcap::class, 'MaNCC', 'MaNCC');
     }
 }

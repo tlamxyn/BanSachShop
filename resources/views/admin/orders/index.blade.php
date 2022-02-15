@@ -12,7 +12,8 @@
               <thead>
                 <tr>
                   <th>Mã hóa đơn</th>
-                  <th>Tài khoản</th>
+                  <th>Tên người nhận </th>
+                  <th>Địa chỉ </th>
                   <th>Tổng Tiền (VNĐ)</th>
                   <th>Trạng thái</th>
                   <th></th>
@@ -24,12 +25,31 @@
 
                 <tr>
                   <td>{{ $hoadon->MaHD }}</td>
-                  <td>{{ $hoadon->MaKH }} </td>
+                  <td>{{ $hoadon->TenKH }} </td>
+                  <td>{{ $hoadon->Diachigiaohang }} </td>
                   <td>{{ $hoadon->TongTien }}</td>
-                  <td>{{ $hoadon->Trangthai }}</td>
+                  @if ($hoadon->Trangthai ==1)
+                              
+                  <td>
+                    <div class="badge badge-outline-warning">Đang xử lý</div>
+                  </td>
+                
+                    
+                @elseif ($hoadon->Trangthai ==2)
+                  
+                    <td>
+                      <div class="badge badge-outline-success">Đã giao hàng</div>
+                    </td>
+                  
+                  @elseif ($hoadon->Trangthai ==0) 
+                  
+                    <td>
+                      <div class="badge badge-outline-danger">Hủy đơn</div>
+                    </td>
+                  
+              @endif
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
                 @endforeach
