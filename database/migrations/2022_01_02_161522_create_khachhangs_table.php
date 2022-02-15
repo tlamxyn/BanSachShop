@@ -15,8 +15,8 @@ class CreateKhachhangsTable extends Migration
     {
         Schema::create('khachhang', function (Blueprint $table) {
             $table->increments('MAKH');
-            $table->string('TaiKhoan');
-            $table->string('Matkhau');
+            $table->string('Taikhoan');
+            $table->string('password');
             $table->string('Diachi');
             $table->string('Sodienthoai');
             $table->string('Email');

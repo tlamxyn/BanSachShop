@@ -22,7 +22,6 @@
                         @endforeach
                         
                       </select>
-
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Mô tả</label>
                     <input  id="my-input" required class="form-control" type="text" name="Mota">
             
