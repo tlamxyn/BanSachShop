@@ -42,7 +42,7 @@ class LoginController extends Controller
             //  dd($nhanvien);
             if (Auth::guard('admin')->attempt([
                 'Email' => $request->email,
-                'password' => $request->password,
+                'Matkhau' => $request->password,
             ], $request->get('remember'),)) { 
                 return redirect()->intended(route('admin.dashboard.index'));
                 //return view('admin.dashboard.index');
@@ -62,7 +62,7 @@ class LoginController extends Controller
         {
         $data = [
             "Email" =>$request->email,
-            "password" => Hash::make($request->password ),
+            "Matkhau" => Hash::make($request->password ),
             "Taikhoan" => 1,
             "Sodienthoai" => 1,
             "Avatar" => 1,
