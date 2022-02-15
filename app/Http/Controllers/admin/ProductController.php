@@ -24,7 +24,6 @@ class ProductController extends Controller
             "Ten" =>$request->Ten,
             "Giaban" => $request->Giaban,
             "SLtonkho" => $request->SLtonkho,
-            "Giaban"=>$request->Giaban,
             "Hinhanh" => $request->Hinhanh,
             "Mota" => $request->Mota ,
             "TacGia" => $request->TacGia,

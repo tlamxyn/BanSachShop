@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+ 
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -44,6 +44,11 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
             ],
+        'user' => [
+                'driver' => 'session',
+                'provider' => 'khachhang',
+                ],
+        
     ],
 
     /*
@@ -70,8 +75,13 @@ return [
         ],
         'admins' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
+            'model' => App\Models\nhanvien::class,
             ],
+            'user' => [
+                'driver' => 'eloquent',
+                'model' => App\Models\khachhang::class,
+                ],
+        
 
         // 'users' => [
         //     'driver' => 'database',
@@ -96,17 +106,23 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'users',
+            'provider' => 'users', 
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],
         'admins' => [
-            'provider' => 'users',
+            'provider' => 'admins',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
             ],
+            'khachhang' => [
+                'provider' => 'khachhang',
+                'table' => 'password_resets',
+                'expire' => 60,
+                'throttle' => 60,
+                ],
     ],
 
     /*
