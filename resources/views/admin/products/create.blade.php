@@ -38,7 +38,6 @@
             
                 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Hình Ảnh</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Hinhanh">
                     <input  id="my-input" required class="form-control" type="file" name="Hinhanh">
             
                 <a href="{{ route('admin.products.index') }}" type="submit" class="btn btn-primary">Back To List</a>

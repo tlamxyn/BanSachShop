@@ -26,20 +26,12 @@
                     <input  id="my-input" required class="form-control" type="text" name="NxB" value="{{  $data->NxB }}">
 
 
-                    <label  for="my-input" class="control-label" style="margin-top: 10px">Số Lượng</label>
-                    <input  id="my-input" required class="form-control" type="text" name="SLtonkho" value="{{  $data->SLtonkho }}">
-
-
-                    <label  for="my-input" class="control-label" style="margin-top: 10px">Giá Bán</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Giaban" value="{{  $data->Giaban }}">
-
-
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Trạng Thái</label>
                     <input  id="my-input" required class="form-control" type="text" name="Trangthai" value="{{  $data->Trangthai }}">
 
 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Hình Ảnh</label>
-                    <input  id="my-input" required class="form-control" type="text" name="Hinhanh" value="{{  $data->Hinhanh }}">
+                    <input  id="my-input" required class="form-control" type="file" name="Hinhanh" value="{{  $data->Hinhanh }}">
 
                     <a href="{{ route('admin.products.index') }}" type="submit" class="btn btn-primary">Back To List</a>
                     <button name="submit" id="" class="btn btn-primary" type="submit">Sửa</button>
