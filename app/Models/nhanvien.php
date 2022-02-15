@@ -17,17 +17,16 @@ class nhanvien extends Authenticatable
     protected $fillable = [
         'MaNV',
         'Taikhoan',
-        'password',
+        'Matkhau',
         'DiaChi',
         'Sodienthoai',
         'Email',
         'Avatar',
         'MaCV',
     ];
-    protected $primarykey = 'id';
     protected $table ='nhanvien';
     protected $hidden = [
-        'password',
+        'Matkhau',
         'remember_token',
     ];
 
