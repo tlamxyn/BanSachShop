@@ -5,12 +5,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\khachhang;
-use Session;
+use Illuminate\Support\Facades\Session;
+use App\Models\sach;
 class HomeController extends Controller
 {
    public function index()
    { 
-       return view('index');
+    $data = sach::all();   
+    return view('index',compact('data'));
    }
    public function cart()
    {
