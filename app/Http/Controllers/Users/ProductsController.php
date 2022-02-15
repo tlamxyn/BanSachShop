@@ -11,7 +11,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        if (sach::where()->exists()) {
+        if (sach::all()->exists()) {
             $data = sach::all();
             return view('index', compact('data'));
         }
