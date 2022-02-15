@@ -62,7 +62,7 @@
     <!-- End custom js for this page -->
   </body>
 
-<<div class="container">
+<div class="container">
     <div class="login-form-bg h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100">
@@ -71,8 +71,7 @@
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
                                 <label class="text-center"> <h4>Đăng nhập</h4></label>
-
-                                <form class="mt-5 mb-5 login-input" action="{{ route('admin.login.post') }}" method="POST">
+                                <form class="mt-5 mb-5 login-input" action="{{ route('admin.login.post') }}" method="POST" role="form">
                                     @csrf
                                     <div class="form-group">
                                         <input class="form-control" type="email" id ="email" name="email"  placeholder="Email" autofocus value="{{ old('email') }}">

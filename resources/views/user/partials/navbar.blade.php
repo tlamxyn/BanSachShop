@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
  <!-- code cho nut like share facebook  -->
  <div id="fb-root"></div>
  <script async defer crossorigin="anonymous"
@@ -7,6 +11,9 @@
  <nav class="navbar navbar-expand-md bg-white navbar-light">
      <div class="container">
          <!-- logo  -->
+            <?php
+            $variableName = session('nameUser');
+            ?>
          <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>DealBook</b>.xyz</a>
 
          <!-- navbar-toggler  -->
@@ -30,23 +37,37 @@
 
              <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
              <ul class="navbar-nav mb-1 ml-auto">
-                 <div class="dropdown">
-                     <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
-                         <a href="#" class="btn btn-secondary rounded-circle">
-                             <i class="fa fa-user"></i>
-                         </a>
-                         <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                             khoản</a>
-                     </li>
-                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                         <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
-                             data-target="#formdangky">Đăng ký</a>
-                         <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
-                             data-target="#formdangnhap">Đăng nhập</a>
-                     </div>
-                 </div>
+             <?php if ($variableName != null) { ?>
+                <div class="dropdown">
+                    <li class="nav-item account d-flex" type="button" class="btn dropdown" data-toggle="dropdown">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <div class="info-logout">
+                            <a class="nav-link text-dark text-uppercase username" href="tai-khoan.html"><?php echo $variableName ?></a>
+                            <a class="nav-link text-dark logout" href="{{ route('home.logoutUser') }}">Thoát <i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                    </li>
+                </div>
+            <?php } else { ?>
+                <div class="dropdown">
+                    <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
+                            khoản</a>
+                    </li>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
+                            data-target="#formdangky">Đăng ký</a>
+                        <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
+                            data-target="#formdangnhap">Đăng nhập</a>
+                    </div>
+                </div>
+            <?php } ?>
                  <li class="nav-item giohang">
-                     <a href="gio-hang.html" class="btn btn-secondary rounded-circle">
+                     <a href="{{ route('home.cart') }}" class="btn btn-secondary rounded-circle">
                          <i class="fa fa-shopping-cart"></i>
                          <div class="cart-amount">0</div>
                      </a>
@@ -81,27 +102,36 @@
                  </button>
              </div>
              <div class="modal-body">
-                 <form id="form-signup" class="form-signin mt-2">
+                 <form id="form-signup" class="form-signin mt-2" action="{{ route('home.SingUpUser') }}" method="POST">
+                    @csrf
                      <div class="form-label-group">
-                         <input type="text" class="form-control" placeholder="Nhập họ và tên" name="name" required
+                         <input type="text" class="form-control" placeholder="Nhập Tài Khoản" name="Taikhoan" required
                              autofocus>
                      </div>
                      <div class="form-label-group">
-                         <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone"
+                         <input type="email" class="form-control" placeholder="Nhập địa chỉ Email " name="Email"
                              required>
                      </div>
                      <div class="form-label-group">
-                         <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
+                        <input type="text" class="form-control" placeholder="Nhập địa chỉ  " name="DiaChi"
+                            required>
+                    </div>
+                     <div class="form-label-group">
+                         <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="Sodienthoai"
                              required>
                      </div>
                      <div class="form-label-group">
-                         <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="password"
-                             required>
-                     </div>
-                     <div class="form-label-group mb-4">
-                         <input type="password" class="form-control" name="confirm_password"
-                             placeholder="Nhập lại mật khẩu" required>
-                     </div>
+                        <input type="text" class="form-control" placeholder="Hình Ảnh" name="Avatar"
+                            required>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="password"
+                            required>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" name="password1"
+                            required>
+                    </div>
                      <button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit"
                          style="background: #F5A623">Đăng ký</button>
                      <hr class="mt-3 mb-2">
@@ -138,14 +168,13 @@
                  </button>
              </div>
              <div class="modal-body">
-                 <form id="form-signin" class="form-signin mt-2">
+                 <form id="form-signin" class="form-signin mt-2" action="{{ route('home.LoginUser') }}" method="POST">
+                    @csrf
                      <div class="form-label-group">
-                         <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
-                             required autofocus>
+                         <input id ="Email" class="form-control" placeholder="Nhập Tài Khoản" name="Taikhoan" >
                      </div>
-
                      <div class="form-label-group">
-                         <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
+                         <input id ="password" type="password" class="form-control" placeholder="Mật khẩu" name="password" >
                      </div>
 
                      <div class="custom-control custom-checkbox mb-3">

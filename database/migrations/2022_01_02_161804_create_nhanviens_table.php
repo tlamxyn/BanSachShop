@@ -16,12 +16,14 @@ class CreateNhanviensTable extends Migration
         Schema::create('nhanvien', function (Blueprint $table) {
             $table->increments('MaNV');
             $table->string('TaiKhoan');
-            $table->string('Matkhau');
+            $table->string('password');
             $table->string('Diachi');
             $table->string('sodienthoai');
             $table->string('email');
             $table->string('avatar');
             $table->integer('MaCV')->unsigned();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
         Schema::table('nhanvien', function (Blueprint $table) {

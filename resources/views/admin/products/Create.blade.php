@@ -15,6 +15,7 @@
                     <input  id="my-input" required class="form-control" type="text" name="Theloai">
 
                     <label  for="my-input" class="control-label" style="margin-top: 10px">Moo tar</label>
+                    <label  for="my-input" class="control-label" style="margin-top: 10px">Mô Tả</label>
                     <input  id="my-input" required class="form-control" type="text" name="Mota">
             
                 

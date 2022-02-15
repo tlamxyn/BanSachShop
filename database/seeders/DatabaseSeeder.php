@@ -20,6 +20,13 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([
+<<<<<<< HEAD
+
+            chucvu::class,
+            NhanVien::class,
+            user::class,
+
+=======
             AdminsTableSeeder::class,
             khachhangsTableSeeder::class,
             nhacungcapsTableSeeder::class,
@@ -31,6 +38,7 @@ class DatabaseSeeder extends Seeder
             phieunhapsTableSeeder::class,
             chitiethdsTableSeeder::class,
             chitietphieunhapsTableSeeder::class
+>>>>>>> layout-user
         ]);
     }
 }
