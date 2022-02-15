@@ -28,6 +28,7 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript"
         src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <link rel="canonical" href="http://dealbook.xyz/">
     <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -37,11 +38,21 @@
     <style>img[alt="www.000webhost.com"]{display: none;}</style>
 </head>
 <body>
-    @include('Users.partials.sidebar')
-   
-    @yield('contents')
-    
     @include('Users.partials.navbar')
+    @include('Users.partials.sidebar')
+    
+    @yield('content')
+
+      <!-- footer  -->
+
+      @include('Users.partials.footer')
+    <!-- nut cuon len dau trang -->
+    <div class="fixed-bottom">
+        <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
+            style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
+    </div>
+    
+    
       
 </body>
 </html>

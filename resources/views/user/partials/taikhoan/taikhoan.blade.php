@@ -1,39 +1,3 @@
-<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="css/gio-hang.css">
-    <script type="text/javascript" src="js/main.js"></script>
-    <link rel="stylesheet" href="fontawesome_free_5.13.0/css/all.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script type="text/javascript"
-        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
-</head>
-
 <body>
     <!-- code cho nut like share facebook  -->
     <div id="fb-root"></div>
@@ -65,22 +29,18 @@
                     </div>
                 </form>
 
-                <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
+                <!-- ô thông tin tài khoản nút đăng xuất và giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
                     <div class="dropdown">
-                        <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
+                        <li class="nav-item account d-flex" type="button" class="btn dropdown" data-toggle="dropdown">
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
+                            <div class="info-logout">
+                                <a class="nav-link text-dark text-uppercase username" href="tai-khoan.html">Khánh Nguyễn</a>
+                                <a class="nav-link text-dark logout" href="#">Thoát <i class="fas fa-sign-out-alt"></i></a>
+                            </div>
                         </li>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
-                                data-target="#formdangky">Đăng ký</a>
-                            <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
-                                data-target="#formdangnhap">Đăng nhập</a>
-                        </div>
                     </div>
                     <li class="nav-item giohang">
                         <a href="gio-hang.html" class="btn btn-secondary rounded-circle">
@@ -415,103 +375,92 @@
         </div>
     </section>
 
-    <!-- giao diện giỏ hàng  -->
-    <section class="content my-3">
+    <!-- nội dung của trang  -->
+    <section class="account-page my-3">
         <div class="container">
-            <div class="cart-page bg-white">
-                <div class="row">
-                    <!-- giao diện giỏ hàng khi không có item  -->
-                    {{-- <div class="col-12 cart-empty d-none">
-                        <div class="py-3 pl-3">
-                            <h6 class="header-gio-hang">GIỎ HÀNG CỦA BẠN <span>(0 sản phẩm)</span></h6>
-                            <div class="cart-empty-content w-100 text-center justify-content-center">
-                                <img src="images/shopping-cart-not-product.png" alt="shopping-cart-not-product">
-                                <p>Chưa có sản phẩm nào trong giở hàng của bạn</p>
-                                <a href="index.html" class="btn nutmuathem mb-3">Mua thêm</a>
+            <div class="page-content bg-white">
+                <div class="account-page-tab-content m-4">
+                    <!-- 2 tab: thông tin tài khoản, danh sách đơn hàng  -->
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a class="nav-item nav-link active" id="nav-taikhoan-tab" data-toggle="tab" href="#nav-taikhoan" role="tab" aria-controls="nav-home" aria-selected="true">Thông tin tài khoản</a>
+                          <a class="nav-item nav-link" id="nav-donhang-tab" data-toggle="tab" href="#nav-donhang" role="tab" aria-controls="nav-profile" aria-selected="false">Danh sách đơn hàng</a>
+                        </div>
+                    </nav>
+
+                    <!-- nội dung 2 tab -->
+                    <div class="tab-content">
+
+                        <!-- nội dung tab 1: thông tin tài khoản  -->
+                        <div class="tab-pane fade show active pl-4 " id="nav-taikhoan" role="tabpanel" aria-labelledby="nav-taikhoan-tab">
+                            <div class="offset-md-4 mt-3">
+                                <h3 class="account-header">Thông tin tài khoản</h3>
+                            </div>
+                            <div class="hoten my-3">
+                                <div class="row">
+                                    <label class="col-md-2 offset-md-2" for="account-hoten">Họ tên</label>
+                                    <input class="col-md-4" type="text" name="account-hoten">
+                                </div>
+                            </div>
+                            <div class="email my-3">
+                                <div class="row">
+                                    <label class="col-md-2 offset-md-2" for="account-email">Địa chỉ email</label>
+                                    <input class="col-md-4" type="text" name="account-email" disabled="disabled" value="abc@gmail.com">
+                                </div>
+                            </div>
+                            <div class="checkbox-change-pass my-3">
+                                <div class="row">
+                                    <input type="checkbox" name="changepass" id="changepass" class="offset-md-4" style="margin-top: 6px;margin-right: 5px; ">
+                                    <label for="changepass">Thay đổi mật khẩu</label>
+                                </div>
+                            </div>
+                            <div class="thay-doi-mk">
+                                <div class="mkcu my-3">
+                                    <div class="row">
+                                        <label class="col-md-2 offset-md-2" for="account-mkcu">Mật khẩu cũ</label>
+                                        <input class="col-md-4" type="text" name="account-mkcu">
+                                    </div>
+                                </div>
+                                <div class="mkmoi my-3">
+                                    <div class="row">
+                                        <label class="col-md-2 offset-md-2" for="account-mkmoi">Mật khẩu mới</label>
+                                        <input class="col-md-4" type="text" name="account-mkmoi">
+                                    </div>
+                                </div>
+                                <div class="xacnhan-mkmoi my-3">
+                                    <div class="row">
+                                        <label class="col-md-2 offset-md-2" for="account-xacnhan-mkmoi">Xác nhận mật khẩu</label>
+                                        <input class="col-md-4" type="text" name="account-xacnhan-mkmoi">
+                                    </div>
+                                </div>
+                                <div class="capnhat my-3">
+                                    <div class="row">
+                                        <button type="button" class="button-capnhat text-uppercase offset-md-4 btn btn-warning mb-4">Cập nhật</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div> --}}
 
-                    <!-- giao diện giỏ hàng khi có hàng (phần comment màu xanh bên dưới là phần 2 sản phẩm trong giỏ hàng nhưng giờ đã demo bằng jquery) -->
-                    <div class="col-12 cart-empty">
-                        <div class="cart-content py-3 pl-3">
-                            <h6 class="header-gio-hang">GIỎ HÀNG CỦA BẠN <span>(1 sản phẩm)</span></h6>
-                            <div class="cart-list-items">
-                                <div class="cart-item d-flex">
-                                    <a href="product-item.html" class="img">
-                                        <img src="\images\lap-ke-hoach-kinh-doanh-hieu-qua.jpg" class="img-fluid" alt="">
-                                    </a>
-                                    <div class="item-caption d-flex w-100">
-                                        <div class="item-info ml-3">
-                                            <a href="product-item.html" class="ten">Lập kế hoạch kinh doanh hiệu quả</a>
-                                            <div class="soluong d-flex">
-                                                <div class="input-number input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text btn-spin btn-dec">-</span>
-                                                    </div>
-                                                    <input type="text" value="1" class="soluongsp  text-center">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text btn-spin btn-inc">+</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item-price ml-auto d-flex flex-column align-items-end">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu">139.000 ₫</div>
-                                            <span class="remove mt-auto"><i class="far fa-trash-alt"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div> 
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <a href="index.html" class="btn nutmuathem mb-3">Mua thêm</a>
-                                </div>
-                                <div class="col-md-5 offset-md-4">
-                                    <div class="tonggiatien">
-                                        <div class="group d-flex justify-content-between">
-                                            <p class="label">Tạm tính:</p>
-                                            <p class="tamtinh">328.000 ₫</p>
-                                        </div>
-                                        <div class="group d-flex justify-content-between">
-                                            <p class="label">Giảm giá:</p>
-                                            <p class="giamgia">0 ₫</p>
-                                        </div>
-                                        <div class="group d-flex justify-content-between">
-                                            <p class="label">Phí vận chuyển:</p>
-                                            <p class="phivanchuyen">0 ₫</p>
-                                        </div>
-                                        <div class="group d-flex justify-content-between">
-                                            <p class="label">Phí dịch vụ:</p>
-                                            <p class="phidicvu">0 ₫</p>
-                                        </div>
-                                        <div class="group d-flex justify-content-between align-items-center">
-                                            <strong class="text-uppercase">Tổng cộng:</strong>
-                                            <p class="tongcong">328.000 ₫</p>
-                                        </div>
-                                        <small class="note d-flex justify-content-end text-muted">
-                                            (Giá đã bao gồm VAT)
-                                        </small>
-                                    </div>
-                                </div>
+                        <!-- nội dung tab 2: danh sách đơn hàng -->
+                        <div class="tab-pane fade py-3" id="nav-donhang" role="tabpanel" aria-labelledby="nav-donhang-tab">
+                            <div class="donhang-table">
+                                <table class="m-auto">
+                                    <tr>
+                                        <th>Mã đơn hàng</th>
+                                        <th>Ngày mua</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái đơn hàng</th>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 ">
-                    <button class="btn btn-lg btn-block btn-checkout text-uppercase text-white" style="background: #F5A623">Đặt mua</button>
-                    </div>    
                 </div>
-                <!-- het row  -->
             </div>
-            <!-- het cart-page  -->
         </div>
-        <!-- het container  -->
     </section>
-    <!-- het khoi content  -->
-
-
+    
     <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
     <section class="abovefooter text-white" style="background-color: #CF111A;">
         <div class="container">
@@ -557,7 +506,8 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- footer  -->
     <footer>
         <div class="container py-4">
             <div class="row">
@@ -603,10 +553,9 @@
 
     <!-- nut cuon len dau trang -->
     <div class="fixed-bottom">
-        <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#" style="background:#CF111A;"><i
-                class="fa fa-chevron-up text-white"></i></div>
+        <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
+            style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
     </div>
-
 
 </body>
 

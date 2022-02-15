@@ -50,7 +50,7 @@
                          <i class="fa fa-shopping-cart"></i>
                          <div class="cart-amount">0</div>
                      </a>
-                     <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
+                     <a class="nav-link text-dark giohang text-uppercase" href="{{ route('home.cart') }}"
                          style="display:inline-block">Giỏ
                          Hàng</a>
                  </li>

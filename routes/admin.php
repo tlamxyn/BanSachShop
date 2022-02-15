@@ -46,6 +46,9 @@ use App\Http\Controllers\Admin;
             Route::put('/update', 'App\Http\Controllers\admin\ProductController@update')->name('admin.products.update');
             Route::get('/{id}/delete', 'App\Http\Controllers\admin\ProductController@delete')->name('admin.products.delete');
           });
+        Route::group(['prefix' => 'warehouse'], function () {
+            Route::get('/',  'App\Http\Controllers\admin\WarehouseController@index')->name('admin.warehouses.index');
+          });
         Route::group(['prefix' => 'orders'], function () {
             Route::get('/',  'App\Http\Controllers\admin\OrderController@index')->name('admin.orders.index');                  
             Route::get('/{id}/delete', [admin\CategoryController::class, 'delete'])->name('admin.orders.delete');

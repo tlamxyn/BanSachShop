@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\Users;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,16 +12,6 @@ use  App\Http\Controllers\Users;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/product', function () {
-    return view('Users.Products.index');
-});
-Route::get('/cart', function () {
-    return view('Users.Carts.index');
-});
-
-
-
-
+Route::get('/','App\Http\Controllers\HomeController@index')->name('index');
+Route::get('/product','App\Http\Controllers\HomeController@product')->name('home.product');
+Route::get('/cart','App\Http\Controllers\HomeController@cart')->name('home.cart');

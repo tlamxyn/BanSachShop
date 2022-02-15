@@ -18,4 +18,8 @@ class khachhang extends Model
         'Email',
         'Avatar',
     ];
+    public function hoadon()
+    {
+        return $this->hasMany(hoadon::class, 'MaKH', 'MaKH');
+    }
 }

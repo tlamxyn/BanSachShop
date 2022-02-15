@@ -1,6 +1,5 @@
 @extends('layouts.user')
-@section('contents')
-@include('Users.partials.sidebar')
+@section('content')
 <section class="content my-4">
     <div class="container">
         <div class="noidung bg-white" style=" width: 100%;">
@@ -662,3 +661,4 @@
                 </div>
             </div>
 @endsection
+

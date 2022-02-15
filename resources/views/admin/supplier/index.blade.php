@@ -25,7 +25,7 @@
                 <tr>
                   <td>{{ $supplier->MaNCC  }}</td>
                   <td>{{ $supplier->TenNcc }} </td>
-                  <td>{{ $supplier->mota }}</td>
+                  <td>{{ substr($supplier->Mota,0,50) }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>

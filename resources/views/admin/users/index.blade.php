@@ -12,8 +12,8 @@
               <thead>
                 <tr>
                   <th>Mã khách hàng</th>
-                  <th>Tài khoản</th>
                   <th>Tên </th>
+                  <th>Email </th>
                   <th></th>
                 </tr>
               </thead>
@@ -24,9 +24,8 @@
                 <tr>
                   <td>{{ $user->MAKH }}</td>
                   <td>{{ $user->TaiKhoan }} </td>
-                  <td>{{ $user->email }}</td>
+                  <td>{{ $user->Email }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
