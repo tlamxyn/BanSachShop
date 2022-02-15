@@ -20,4 +20,8 @@ class nhanvien extends Model
         'Avatar',
         'MaCV',
     ];
+    public function chucvu()
+    {
+        return $this->belongsTo(chucvu::class, 'MaCV', 'MaCV');
+    }
 }

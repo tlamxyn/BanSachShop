@@ -19,10 +19,9 @@ class sach extends Model
         'Theloai',
         'Trangthai',
     ];
-    protected $primarykey = 'id';
     protected $table ='sach';
     public function theloai()
     {
-        return $this->hasMany(chitiethd::class, 'Theloai', 'matl');
+        return $this->belongsTo(theloai::class, 'Theloai', 'MaTL');
     }
 }

@@ -24,4 +24,8 @@ class phieunhap extends Model
     {
         return $this->belongsTo(nhanvien::class, 'MaNV', 'MaNV');
     }
+    public function nhacungcap()
+    {
+        return $this->belongsTo(nhacungcap::class, 'MaNCC', 'MaNCC');
+    }
 }

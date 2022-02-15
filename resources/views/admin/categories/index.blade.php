@@ -23,9 +23,9 @@
                   
 
                 <tr>
-                  <td>{{ $categories->matl }}</td>
-                  <td>{{ $categories->ten }} </td>
-                  <td>{{ $categories->mota }}</td>
+                  <td>{{ $categories->MaTL }}</td>
+                  <td>{{ $categories->Ten }} </td>
+                  <td>{{ substr($categories->Mota,0,50)}}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Edit</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>

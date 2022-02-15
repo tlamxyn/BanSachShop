@@ -12,7 +12,7 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>Tài khoản</th>
+                  <th>Tên nhân viên </th>
                   <th>Email</th>
                   <th>Chức vụ</th>
                   <th></th>
@@ -25,9 +25,8 @@
                 <tr>
                   <td>{{ $nhanvien->TaiKhoan }}</td>
                   <td>{{ $nhanvien->email }} </td>
-                  <td>{{ $nhanvien->MaCV }}</td>
+                  <td>{{ $nhanvien->chucvu->Ten }}</td>
                   <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
                     <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>

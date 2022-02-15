@@ -15,4 +15,8 @@ class chucvu extends Model
         'Ten',
         'Mota',
     ];
+    public function nhanvien()
+    {
+        return $this->hasMany(nhanvien::class, 'MaCV', 'MaCV');
+    }
 }

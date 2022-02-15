@@ -12,7 +12,8 @@
               <thead>
                 <tr>
                   <th>Mã hóa đơn</th>
-                  <th>Tài khoản</th>
+                  <th>Nhà cung cấp</th>
+                  <th>Người lập</th>
                   <th>Tổng Tiền (VNĐ)</th>
                   <th></th>
                 </tr>
@@ -23,11 +24,11 @@
 
                 <tr>
                   <td>{{ $phieunhap->MaPN }}</td>
-                  <td>{{ $phieunhap->MaNV }} </td>
-                  <td>{{ $phieunhap->Dongia }}</td>
+                  <td>{{ $phieunhap->nhacungcap->TenNcc }}</td>
+                  <td>{{ $phieunhap->nhanvien->TaiKhoan }} </td>
+                  <td>{{ $phieunhap->Tongtien }}</td>
                   <td>
                     <a  class="btn btn-outline-secondary btn-icon-text">Details</a>
-                    <a  class="btn btn-outline-secondary btn-icon-text">Delete</a>
                   </td>
                 </tr>
                 @endforeach

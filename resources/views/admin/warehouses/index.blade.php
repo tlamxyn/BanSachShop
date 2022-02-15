@@ -15,28 +15,26 @@
                   <th></th>
                   <th>Mã sản phẩm</th>
                   <th>Tên sản phẩm</th>
-                  <th>Thể Loại</th>
-                  
-                  <th>Tác giả</th>
-                  <th>Nhà xuất bản</th>
+                  <th>Giá bán</th>
+                  <th>Số lượng tồn kho</th>
+                  <th>Tổng</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 @foreach ($ds_sp as $product )
-                  
+                @php
+                  $tong =0;
+                  $tong= $product->Giaban*$product->SLtonkho ;
+                @endphp
 
                 <tr>
                   <td></td>
                   <td>{{ $product->MaSP }}</td>
                   <td>{{ $product->Ten }} </td>
-                  <td>{{ $product->theloai->Ten }}</td>
-                  
-                  <td>{{ $product->TacGia }}</td>
-                  <td>{{ $product->NxB }}</td>
-                  <td>
-                    <a  class="btn btn-outline-secondary btn-icon-text"href={{ route('admin.products.edit',$product->MaSP)}}>Edit</a>
-                  </td>
+                  <td>{{ $product->Giaban }} </td>
+                  <td>{{ $product->SLtonkho }} </td>
+                  <td>{{ $tong}} </td>
                 </tr>
                 @endforeach
               </tbody>

@@ -11,8 +11,11 @@ class theloai extends Model
 
     use HasFactory;
     protected $fillable = [
-        'MaTL',
         'Ten',
         'Mota',
     ];
+    public function sach()
+    {
+        return $this->hasMany(sach::class, 'MaTL','Theloai');
+    }
 }

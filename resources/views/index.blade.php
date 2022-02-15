@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title') Index @endsection
+@section('title') 
 @section('content')
 
 <!-- khoi sach moi  -->
@@ -15,6 +15,7 @@
             </div>
             <div class="khoisanpham" style="padding-bottom: 2rem;">
                 <!-- 1 san pham -->
+                @foreach($data as $content )
                 <div class="card">
                     <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham"
                         style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
@@ -22,11 +23,11 @@
                         <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
                             alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                         <div class="card-body noidungsp mt-3">
-                            <h3 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h3>
-                            <small class="tacgia text-muted">Brian Finch</small>
+                            <h3 class="card-title ten">{{  $content->Ten }}</h3>
+                            <small class="tacgia text-muted">{{  $content->TacGia }}</small>
                             <div class="gia d-flex align-items-baseline">
                                 <div class="giamoi">111.200 ₫</div>
-                                <div class="giacu text-muted">139.000 ₫</div>
+                                <div class="giacu text-muted">{{  $content->Giaban }}</div>
                                 <div class="sale">-20%</div>
                             </div>
                             <div class="danhgia">
@@ -42,7 +43,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="card">
+                @endforeach
+                <!-- <div class="card">
                     <a href="Ma-bun-luu-manh-va-nhung-cau-chuyen-khac-cua-nguyen-tri.html" class="motsanpham"
                         style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
                         title="Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn
@@ -232,7 +234,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

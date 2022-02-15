@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\sach;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $data = sach::all();   
+        return view('index',compact('data'));
  
     }
     public function product()
@@ -18,6 +20,6 @@ class HomeController extends Controller
     }
     public function cart()
     {
-        return view('user.cart');
+        return view('Users.Carts.index');
     }
 }
