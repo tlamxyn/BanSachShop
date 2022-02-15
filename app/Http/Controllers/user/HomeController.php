@@ -23,7 +23,7 @@ class HomeController extends Controller
    public function loginUser(Request $request)
    {
         $taikhoan = DB::table('khachhang')->where('Taikhoan',$request->Taikhoan)->exists();
-        $matkhau = DB::table('khachhang')->where('password',$request->password)->exists();
+        $matkhau = DB::table('khachhang')->where('Matkhau',$request->password)->exists();
         Session::put('nameUser', null);
         
         if($taikhoan==true)
@@ -59,7 +59,7 @@ class HomeController extends Controller
         {
         $data = [
             "Email" =>$request->Email,
-            "password" => $request->password ,
+            "Matkhau" => $request->password ,
             "Taikhoan" => $request->Taikhoan,
             "Sodienthoai" => $request->Sodienthoai,
             "Avatar" => $request->Avatar,
