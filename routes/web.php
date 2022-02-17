@@ -1,9 +1,10 @@
 <?php
-use Illuminate\Support\Facades\Route;  
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\HomeController;
 
 Route::group(['prefix' => '/'], function () {
     Route::get('',[HomeController::class, 'index'])->name('index');
+    Route::get('search',[HomeController::class, 'search'])->name('search');
     Route::get('product',[HomeController::class, 'product'])->name('home.product');
     Route::get('cart',[HomeController::class, 'cart'])->name('home.cart');
     Route::post('home.LoginUser', [HomeController::class, 'loginUser'])->name('home.LoginUser');

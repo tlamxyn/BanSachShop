@@ -19,7 +19,7 @@ class khachhangFactory extends Factory
         $name = $this->faker->lastName . ' ' . $this->faker->lastName . ' ' . $this->faker->firstName();
         return [
             'TaiKhoan' => $name,
-            'Matkhau' => $this->faker->bothify('??##??#'),
+            'password' => $this->faker->bothify('??##??#'),
             'Diachi' => $this->faker->address(),
             'Sodienthoai' => $this->faker->phoneNumber(),
             'Email' => $this->faker->unique()->safeEmail(),

@@ -16,12 +16,12 @@
 
          <div class="collapse navbar-collapse" id="collapsibleNavId">
              <!-- form tìm kiếm  -->
-             <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
+             <form method="GET" action="{{ route('search') }}" class="form-inline ml-auto my-2 my-lg-0 mr-3">
                  <div class="input-group" style="width: 520px;">
-                     <input type="text" class="form-control" aria-label="Small"
+                     <input type="text" class="form-control" aria-label="Small" name="search_content"
                          placeholder="Nhập sách cần tìm kiếm...">
                      <div class="input-group-append">
-                         <button type="button" class="btn" style="background-color: #CF111A; color: white;">
+                         <button type="submit" class="btn" style="background-color: #CF111A; color: white;">
                              <i class="fa fa-search"></i>
                          </button>
                      </div>
@@ -58,7 +58,7 @@
          </div>
      </div>
  </nav>
- 
+
 
  <!-- form dang ky khi click vao button tren header-->
  <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
@@ -169,4 +169,3 @@
  </div>
 
 
- 

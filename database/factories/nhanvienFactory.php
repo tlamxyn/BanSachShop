@@ -18,7 +18,7 @@ class nhanvienFactory extends Factory
         $name = $this->faker->lastName . ' ' . $this->faker->lastName . ' ' . $this->faker->firstName();
         return [
             'TaiKhoan' => $name,
-            'Matkhau' => $this->faker->bothify('??##??#'),
+            'password' => $this->faker->bothify('??##??#'),
             'Diachi' => $this->faker->address(),
             'sodienthoai' => $this->faker->phoneNumber(),
             'email' => $this->faker->unique()->safeEmail(),

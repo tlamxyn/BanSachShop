@@ -32,6 +32,7 @@ $(function () {
         ]
     });
 
+
     //hieu ung header va nut backtotop
     $("#backtotop").click(function () {
         $("html, body").animate({ scrollTop: 0 }, 400);
@@ -73,7 +74,7 @@ $(function () {
         $("ul.tabs .tab-dangnhap").removeClass("active");
     });
 
-    // form dangnhap dangky 
+    // form dangnhap dangky
     $(".tab-dangky").click(function (e) {
         $('#formdangnhap').removeClass("fade");
         $('#formdangky').removeClass("fade");
@@ -126,7 +127,7 @@ $(function () {
     });
 
 
-    
+
 
     //rotate chevron
     $('#step1contentid').on('show.bs.collapse', function () {
@@ -300,7 +301,7 @@ $(function () {
         }
     });
 
-    // add to cart 
+    // add to cart
     let product =
     {
         name: $('.khoithongtin .ten').text(),
@@ -464,7 +465,7 @@ $(function () {
                 </div>
             </div>
             `
-            
+
         }
     }
 
@@ -481,9 +482,9 @@ $(function () {
         itemSelector:'.item',
     })
 
-    $('.tag a').click(function (e) { 
+    $('.tag a').click(function (e) {
         var tacgia = $(this).data('tacgia');
-        
+
         if(tacgia == 'all'){
             $('.items .row').isotope({filter:'*'})
         }else{
@@ -493,7 +494,7 @@ $(function () {
     });
 
     $('.thay-doi-mk').hide();
-    $("#changepass").click(function (e) { 
+    $("#changepass").click(function (e) {
         $('.thay-doi-mk').toggle(200);
     });
 
